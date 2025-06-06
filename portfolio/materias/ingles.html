@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome da Matéria - Meu Portfólio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Estilos específicos para páginas de matérias */
+        .materia-header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .materia-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .projeto {
+            background: #f9f9f9;
+            border-left: 4px solid #e8491d;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .conteudo-list {
+            columns: 2;
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        @media (max-width: 600px) {
+            .conteudo-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="materia-header">
+        <h1>Nome da Matéria</h1>
+        <p>Semestre: [X] | Carga Horária: [XX] horas</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#sobre">Sobre a Matéria</a></li>
+            <li><a href="#conteudo">Conteúdo</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#aprendizados">Aprendizados</a></li>
+        </ul>
+    </nav>
+    
+    <div class="materia-content">
+        <section id="sobre">
+            <h2>Sobre a Matéria</h2>
+            <p>[Descrição detalhada da matéria, objetivos e importância no curso]</p>
+        </section>
+        
+        <section id="conteudo">
+            <h2>Conteúdo Estudado</h2>
+            <ul class="conteudo-list">
+                <li>Tópico 1</li>
+                <li>Tópico 2</li>
+                <li>Tópico 3</li>
+                <!-- Adicione mais conforme necessário -->
+            </ul>
+        </section>
+        
+        <section id="projetos">
+            <h2>Projetos Realizados</h2>
+            
+            <div class="projeto">
+                <h3>Nome do Projeto 1</h3>
+                <p><strong>Tecnologias:</strong> Lista de tecnologias usadas</p>
+                <p>Descrição detalhada do projeto, objetivos e seu papel no desenvolvimento.</p>
+                <a href="#">Link para o projeto (se disponível)</a>
+            </div>
+            
+            <!-- Adicione mais projetos conforme necessário -->
+        </section>
+        
+        <section id="aprendizados">
+            <h2>Principais Aprendizados</h2>
+            <p>[Reflexão sobre o que você aprendeu, desafios enfrentados e como esta matéria contribuiu para sua formação]</p>
+        </section>
+        
+        <div class="voltar">
+            <a href="../index.html">&larr; Voltar para o portfólio</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Meu Portfólio Acadêmico. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

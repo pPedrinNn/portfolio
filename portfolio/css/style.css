@@ -1,0 +1,130 @@
+/* Estilos gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    padding-top: 50px;
+}
+
+nav {
+ nav {
+  position: fixed; /* Fica fixo no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Deixe maior conforme desejar */
+  background-color: white;
+  z-index: 1000; /* Garante que fique acima de tudo */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* sombra opcional */
+}
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #00BFFF;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 5px 0;
+    }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+nav a, nav li, nav ul {
+  color: white !important;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+nav ul {
+  padding-right: 40px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+h2 {
+
+  text-align: center;
+
+}
+
+/* Garante que a seção de matérias ocupe toda a largura */
+#materias {
+    width: 100%;
+    padding: 0 20px; /* Adiciona um pequeno espaçamento nas laterais */
+    box-sizing: border-box; /* Garante que o padding não some à largura total */
+}
+
+/* Centraliza o título e o parágrafo */
+#materias h2,
+#materias p {
+    text-align: center;
+    max-width: 100%; /* Remove qualquer limitação de largura */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Remove margens/paddings conflitantes */
+.container section {
+    width: 100%;
+}
