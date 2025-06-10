@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Pedro Henrique</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .about-section {
+            padding: 6rem 0 4rem;
+            background-color: #000;
+            color: #e0f7ff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 3rem;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-img {
+            width: 300px;
+            border-radius: 10px;
+            border: 4px solid #7fdbff;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #7fdbff;
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            color: #7fdbff;
+            margin-top: 2rem;
+        }
+        
+        p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 2rem 0;
+        }
+        
+        .skill {
+            background-color: #102e4a;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid #7fdbff;
+        }
+        
+        .contact-info {
+            background-color: #0d1b2a;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+        
+        .contact-info a {
+            color: #7fdbff;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-img {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Pedro Henrique</div>
+        <img src="imagens/logoPHA.jpg" class="logo-img" alt="Logo">
+        <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre Mim</a></li>
+            <li><a href="index.html#materias">Matérias</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-section">
+        <div class="container">
+            <h1>Sobre Mim</h1>
+            
+            <div class="about-content">
+                <img src="imagens/perfil.jpg" alt="Pedro Henrique" class="about-img">
+                
+                <div class="about-text">
+                    <h2>Olá, eu sou o Pedro!</h2>
+                    <p>Estudante de Análise e Desenvolvimento de Sistemas na Fatec Jales, apaixonado por tecnologia e desenvolvimento de software. Desde criança sempre fui fascinado por computadores e como eles funcionam, o que me levou a escolher essa carreira.</p>
+                    
+                    <p>Atualmente, estou no Xº semestre do curso e já tive a oportunidade de trabalhar com diversas tecnologias e metodologias que estão transformando o mercado de TI.</p>
+                    
+                    <h2>Habilidades Técnicas</h2>
+                    <div class="skills">
+                        <span class="skill">HTML/CSS</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">Java</span>
+                        <span class="skill">SQL</span>
+                        <span class="skill">Git</span>
+                        <span class="skill">React</span>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h2>Contato</h2>
+                        <p>📧 Email: <a href="mailto:ph377669@gmail.com">ph377669@gmail.com</a></p>
+                        <p>🔗 LinkedIn: <a href="https://linkedin.com/in/seu-perfil" target="_blank">linkedin.com/in/seu-perfil</a></p>
+                        <p>💻 GitHub: <a href="https://github.com/pPedrinNn" target="_blank">github.com/pPedrinNn</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Pedro Henrique Afonso da Silva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,281 +1,337 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio Acadêmico</title>
+    <title>Pedro Henrique - Portfólio Acadêmico</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* Estilos específicos para a página principal */
         .hero {
-            background: #000000;
-            color: white;
-            padding: 4rem 0;
+            background: #000;
+            color: #e0f7ff;
+            padding: 6rem 0 4rem;
             text-align: center;
         }
         
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
+            color: #7fdbff;
         }
-        
         
         .hero p {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        
+        .hero-img {
+            width: 180px;
+            border-radius: 50%;
+            margin: 2rem auto;
+            border: 4px solid #7fdbff;
+            display: block;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #7fdbff;
+            color: #000;
+            padding: 0.8rem 1.8rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1rem 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #5bc0eb;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(127, 219, 255, 0.4);
         }
         
         .materias-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 2rem 0;
+            gap: 25px;
+            margin: 3rem auto;
+            max-width: 1200px;
+            padding: 0 20px;
         }
         
         .materia-card {
-            background: 	#0000CD;
-            border-radius: 8px;
+            background: #0d1b2a;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            border: 1px solid #1e3a5f;
         }
         
         .materia-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(127, 219, 255, 0.2);
+            border-color: #7fdbff;
         }
         
         .card-header {
             padding: 1.5rem;
             color: white;
             text-align: center;
+            background: #102e4a;
+            border-bottom: 2px solid #7fdbff;
         }
         
         .card-content {
             padding: 1.5rem;
+            color: #e0f7ff;
         }
         
-        .btn {
-            display: inline-block;
-            background: #00BFFF;
-            color: black;
-            padding: 0.6rem 1.2rem;
-            border-radius: 4px;
-            text-decoration: none;
-            margin-top: 1rem;
-            transition: background 0.3s ease;
+        .card-content p {
+            margin-bottom: 1.5rem;
+            min-height: 60px;
         }
         
-        .btn:hover {
-            background: #00BFFF;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
-        /* Cores diferentes para cada card */
-        .eng-software { background-color: #3498db; }
-        .banco-dados { background-color: #16a085; }
-        .web-mobile { background-color: #9b59b6; }
-        .estrutura-dados { background-color: #e67e22; }
-        .ingles { background-color: #27ae60; }
-        .mat-discreta { background-color: #d35400; }
-        .gestao-agil { background-color: #2c3e50; }
-        .proj-integrador { background-color: #1abc9c; }
-        .ihc { background-color: #8e44ad; }
-        .icmned { background-color: #7f8c8d; }
-        .ocso { background-color: #f39c12; }
+        section {
+            padding: 4rem 0;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: #7fdbff;
+        }
+        
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            color: #e0f7ff;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .destaque {
+            color: #7fdbff;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-
     <nav>
-  <div class="logo">Meu Portfólio</div>
-  <img src="imagens/logoPHA.jpg" class="logo-img">
-  <ul class="menu">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
-</nav>
+        <div class="logo">Pedro Henrique</div>
+        <img src="imagens/logoPHA.jpg" class="logo-img" alt="Logo">
+        <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre Mim</a></li>
+            <li><a href="#materias">Matérias</a></li>
+        </ul>
+    </nav>
 
     <header class="hero">
         <div class="container">
-            <h1>Pedro Henrique afonso da Silva </h1>
-            <p>Meu Portfólio</p>
+            <h1>Pedro Henrique Afonso da Silva</h1>
+            <p class="intro-text">Desenvolvedor e estudante de Análise e Desenvolvimento de Sistemas na Fatec Jales</p>
+            <img src="imagens/perfil.jpg" alt="Pedro Henrique" class="hero-img">
+            <div>
+                <a href="#materias" class="btn">Ver Matérias</a>
+                <a href="sobre.html" class="btn">Sobre Mim</a>
+            </div>
         </div>
     </header>
     
- <div class="container" style="background-color: #000000; color: white; width: 100%;">
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <div class="about-content">
-                <img src="imagens/perfil.jpg" alt="Minha Foto" style="max-width: 200px; border-radius: 50%; float: left; margin-right: 20px;">
-                <p>Olá! Eu sou Pedro Henrique Afonso da Silva, mais conhecido como Pedrin, estudante de ADS(Analíse e Desenvolvimento de Sistemas) na Faculdade de Tecnologia Prof. José Camargo - Fatec Jales. Este portfólio foi criado para documentar meu aprendizado nas diversas disciplinas do meu curso.</p>
-                <p>Meus interesses incluem desenvolvimento de software, arquitetura de sistemas, banco de dados e experiência do usuário. Estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades como desenvolvedor.</p>
-                <p>Neste portfólio, você encontrará detalhes sobre cada disciplina que cursei e as competências que adquiri ao longo da minha jornada acadêmica.</p>
+    <main>
+        <section id="materias">
+            <div class="container">
+                <h2>Matérias do Curso</h2>
+                <p class="intro-text">Explore as disciplinas que compõem minha formação acadêmica. Cada matéria representa um conjunto de conhecimentos e habilidades adquiridas.</p>
+                
+                <div class="materias-grid">
+                    <!-- Engenharia de Software -->
+                    <div class="materia-card">
+                        <div class="card-header eng-software">
+                            <h3>Engenharia de Software</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Conceitos fundamentais de engenharia de software, metodologias de desenvolvimento e boas práticas.</p>
+                            <a href="materias/engenharia-sofware.html" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Banco de Dados -->
+                    <div class="materia-card">
+                        <div class="card-header banco-dados">
+                            <h3>Técnicas Avançadas de Banco de Dados</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Estudo de bancos de dados relacionais e não-relacionais, otimização de queries e modelagem avançada.</p>
+                            <a href="materias/banco-de-dados.html" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Programação Web e Mobile -->
+                    <div class="materia-card">
+                        <div class="card-header web-mobile">
+                            <h3>Técnicas Avançadas de Programação Web e Mobile</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Desenvolvimento de aplicações web e mobile com frameworks modernos e arquiteturas escaláveis.</p>
+                            <a href="materias/web-mobile.html" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Estrutura de Dados -->
+                    <div class="materia-card">
+                        <div class="card-header estrutura-dados">
+                            <h3>Estrutura de Dados</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Implementação e análise de estruturas de dados fundamentais para a computação.</p>
+                            <a href="materias/estrutura-dados.html" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Língua Inglesa -->
+                    <div class="materia-card">
+                        <div class="card-header ingles">
+                            <h3>Língua Inglesa</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Desenvolvimento de habilidades de comunicação em inglês com foco em tecnologia.</p>
+                            <a href="materias/ingles.html" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Matemática Discreta -->
+                    <div class="materia-card">
+                        <div class="card-header mat-discreta">
+                            <h3>Matemática Discreta</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Fundamentos matemáticos para ciência da computação, incluindo lógica e teoria dos grafos.</p>
+                            <a href="materias/matematica-discreta.html" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Gestão Ágil -->
+                    <div class="materia-card">
+                        <div class="card-header gestao-agil">
+                            <h3>Gestão Ágil de Projetos</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Metodologias ágeis como Scrum e Kanban aplicadas ao desenvolvimento de software.</p>
+                            <a href="materias/gestao-agil.html" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto Integrador -->
+                    <div class="materia-card">
+                        <div class="card-header proj-integrador">
+                            <h3>Projeto Integrador</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Integração de conhecimentos de diversas disciplinas em um projeto prático.</p>
+                            <a href="materias/projeto-integrador.html" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                      <!-- ICMNED -->
+                    <div class="materia-card">
+                        <div class="card-header icmned">
+                            <h3>ICMNED</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Introdução à Computação: Máquinas, Redes e Engenharia de Dados.</p>
+                            <a href="materias/icmned.html" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                        <!-- Interação Humano-Computador -->
+                    <div class="materia-card">
+                        <div class="card-header interacao-hum-com">
+                            <h3>Interação Humano-Computador</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Princípios de design de interfaces e experiência do usuário.</p>
+                            <a href="materias/interacao-hum-com.html" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                       <!-- OCSO -->
+                    <div class="materia-card">
+                        <div class="card-header ocso">
+                            <h3>OCSO</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Organização de Computadores e Sistemas Operacionais.</p>
+                            <a href="materias/ocso.html" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                        <!-- Programação -->
+                    <div class="materia-card">
+                        <div class="card-header programacao">
+                            <h3>Programação</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Fundamentos de programação e lógica computacional.</p>
+                            <a href="materias/programacao.html" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         
-         <section id="materias" style="text-align: center; width: 100%;">
-            <h2 style="margin: 0 auto;">Matérias do Curso</h2>
-            <p>Clique em cada matéria para ver detalhes sobre o conteúdo estudado, projetos realizados e aprendizados:</p>
-            
-            <div class="materias-grid">
-                <!-- Engenharia de Software -->
-                <div class="materia-card">
-                    <div class="card-header eng-software">
-                        <h3>Engenharia de Software</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>Conceitos fundamentais de engenharia de software, metodologias de desenvolvimento e boas práticas.</p>
-                        <a href="materias/engenharia-software.html" class="btn">Ver Detalhes</a>
-                    </div>
+        <section id="destaques" style="background-color: #0d1b2a;">
+            <div class="container">
+                <h2>Destaques Acadêmicos</h2>
+                <div class="intro-text">
+                    <p>Alguns dos meus principais <span class="destaque">projetos</span> e <span class="destaque">conquistas</span> durante o curso:</p>
                 </div>
-                
-                <!-- Banco de Dados -->
-                <div class="materia-card">
-                    <div class="card-header banco-dados">
-                        <h3>Técnicas Avançadas de Banco de Dados</h3>
+                <div class="materias-grid">
+                    <div class="materia-card">
+                        <div class="card-header" style="background-color: #1e3a5f;">
+                            <h3>Projeto Integrador</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Desenvolvimento de um sistema completo utilizando conhecimentos de múltiplas disciplinas.</p>
+                            <a href="#" class="btn">Ver Projeto</a>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <p>Estudo de bancos de dados relacionais e não-relacionais, otimização de queries e modelagem avançada.</p>
-                        <a href="materias/banco-dados.html" class="btn">Ver Detalhes</a>
+                    <div class="materia-card">
+                        <div class="card-header" style="background-color: #1e3a5f;">
+                            <h3>Artigos Publicados</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Participação em pesquisas acadêmicas com artigos publicados em eventos da área.</p>
+                            <a href="#" class="btn">Ler Artigos</a>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Programação Web e Mobile -->
-                <div class="materia-card">
-                    <div class="card-header web-mobile">
-                        <h3>Técnicas Avançadas de Programação Web e Mobile</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>Desenvolvimento de aplicações web e mobile com frameworks modernos e arquiteturas escaláveis.</p>
-                        <a href="materias/web-mobile.html" class="btn">Ver Detalhes</a>
-                    </div>
-                </div>
-                
-                <!-- Estrutura de Dados -->
-                <div class="materia-card">
-                    <div class="card-header estrutura-dados">
-                        <h3>Estrutura de Dados</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>Implementação e análise de estruturas de dados fundamentais para a computação.</p>
-                        <a href="materias/estrutura-dados.html" class="btn">Ver Detalhes</a>
-                    </div>
-                </div>
-                
-                <!-- Língua Inglesa -->
-                <div class="materia-card">
-                    <div class="card-header ingles">
-                        <h3>Língua Inglesa</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>Desenvolvimento de habilidades de comunicação em inglês com foco em tecnologia.</p>
-                        <a href="materias/ingles.html" class="btn">Ver Detalhes</a>
-                    </div>
-                </div>
-                
-                <!-- Matemática Discreta -->
-                <div class="materia-card">
-                    <div class="card-header mat-discreta">
-                        <h3>Matemática Discreta</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>Fundamentos matemáticos para ciência da computação, incluindo lógica e teoria dos grafos.</p>
-                        <a href="materias/matematica-discreta.html" class="btn">Ver Detalhes</a>
-                    </div>
-                </div>
-                
-                <!-- Gestão Ágil -->
-                <div class="materia-card">
-                    <div class="card-header gestao-agil">
-                        <h3>Gestão Ágil de Projetos</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>Metodologias ágeis como Scrum e Kanban aplicadas ao desenvolvimento de software.</p>
-                        <a href="materias/gestao-agil.html" class="btn">Ver Detalhes</a>
-                    </div>
-                </div>
-                
-                <!-- Projeto Integrador -->
-                <div class="materia-card">
-                    <div class="card-header proj-integrador">
-                        <h3>Projeto Integrador</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>Integração de conhecimentos de diversas disciplinas em um projeto prático.</p>
-                        <a href="materias/projeto-integrador.html" class="btn">Ver Detalhes</a>
-                    </div>
-                </div>
-                
-                <!-- IHC -->
-                <div class="materia-card">
-                    <div class="card-header ihc">
-                        <h3>Interação Humano Computador</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>Princípios de design de interfaces e experiência do usuário.</p>
-                        <a href="materias/interacao-hum-com.html" class="btn">Ver Detalhes</a>
-                    </div>
-                </div>
-                
-                <!-- I.C.M.N.E.D. -->
-                <div class="materia-card">
-                    <div class="card-header icmned">
-                        <h3>I.C.M.N.E.D.</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>Introdução aos Conceitos e Métodos da Nova Era Digital.</p>
-                        <a href="materias/icmned.html" class="btn">Ver Detalhes</a>
-                    </div>
-                </div>
-                
-                <!-- O.C.S.O. -->
-                <div class="materia-card">
-                    <div class="card-header ocso">
-                        <h3>O.C.S.O.</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>Oficina de Criação de Soluções Orientadas.</p>
-                        <a href="materias/ocso.html" class="btn">Ver Detalhes</a>
+                    <div class="materia-card">
+                        <div class="card-header" style="background-color: #1e3a5f;">
+                            <h3>Certificações</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Certificações obtidas em tecnologias relevantes para o mercado de trabalho.</p>
+                            <a href="#" class="btn">Ver Certificados</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <section id="contato">
-            <h2>Contato</h2>
-            <div class="contact-info">
-                <p>Entre em contato comigo através dos seguintes meios:</p>
-                <ul>
-                    <li>📧 Email: <a href="mailto:ph377669@gmail.com">ph377669@gmail.com</a></li>
-                    <li>🔗 LinkedIn: <a href="https://linkedin.com/in/seu-perfil" target="_blank">linkedin.com/in/seu-perfil</a></li>
-                    <li>💻 GitHub: <a href="https://github.com/pPedrinNn" target="_blank">github.com/pPedrinNn</a></li>
-                    <li>📱 Celular: (XX) XXXX-XXXX</li>
-                </ul>
-                
-                <h3>Envie uma mensagem</h3>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nome:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Enviar Mensagem</button>
-                </form>
-            </div>
-        </section>
-    </div>
-    
+    </main>
+
     <footer>
-        <p>&copy; <span id="year"></span> Meu Portfólio Acadêmico. Todos os direitos reservados.</p>
-        <p>Criado com ❤️ por [Seu Nome]</p>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Pedro Henrique Afonso da Silva. Todos os direitos reservados.</p>
+            <p>Criado com ❤️ por Pedro Henrique</p>
+        </div>
     </footer>
 
     <script>

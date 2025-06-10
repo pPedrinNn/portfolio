@@ -1,102 +1,182 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nome da Matéria - Meu Portfólio</title>
+    <title>Técnicas Avançadas de Banco de Dados - Pedro Henrique</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        /* Estilos específicos para páginas de matérias */
-        .materia-header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 2rem 0;
+        .materia-section {
+            padding: 6rem 0 4rem;
+            background-color: #000;
+            color: #e0f7ff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
             text-align: center;
+            font-size: 2.8rem;
+            color: #7fdbff;
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            color: #7fdbff;
+            margin-top: 3rem;
+            font-size: 1.8rem;
+        }
+        
+        p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .materia-header {
+            background-color: #164e63;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            text-align: center;
+            border: 2px solid #7fdbff;
         }
         
         .materia-content {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .content-block {
+            flex: 1;
+            min-width: 300px;
+            background-color: #0d1b2a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid #1e3a5f;
+        }
+        
+        .content-block h3 {
+            color: #7fdbff;
+            margin-top: 0;
+        }
+        
+        ul {
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
         }
         
         .projeto {
-            background: #f9f9f9;
-            border-left: 4px solid #e8491d;
-            padding: 1rem;
-            margin: 1rem 0;
+            background-color: #102e4a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #7fdbff;
         }
         
-        .conteudo-list {
-            columns: 2;
-            list-style-type: none;
-            padding: 0;
+        .btn {
+            display: inline-block;
+            background: #7fdbff;
+            color: #000;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
         }
         
-        @media (max-width: 600px) {
-            .conteudo-list {
-                columns: 1;
+        .btn:hover {
+            background: #5bc0eb;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(127, 219, 255, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .materia-content {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
-    <header class="materia-header">
-        <h1>Nome da Matéria</h1>
-        <p>Semestre: [X] | Carga Horária: [XX] horas</p>
-    </header>
-    
     <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="#sobre">Sobre a Matéria</a></li>
-            <li><a href="#conteudo">Conteúdo</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#aprendizados">Aprendizados</a></li>
+        <div class="logo">Pedro Henrique</div>
+        <img src="../imagens/logoPHA.jpg" class="logo-img" alt="Logo">
+        <ul class="menu">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../sobre.html">Sobre Mim</a></li>
+            <li><a href="../index.html#materias">Matérias</a></li>
         </ul>
     </nav>
-    
-    <div class="materia-content">
-        <section id="sobre">
-            <h2>Sobre a Matéria</h2>
-            <p>[Descrição detalhada da matéria, objetivos e importância no curso]</p>
-        </section>
-        
-        <section id="conteudo">
-            <h2>Conteúdo Estudado</h2>
-            <ul class="conteudo-list">
-                <li>Tópico 1</li>
-                <li>Tópico 2</li>
-                <li>Tópico 3</li>
-                <!-- Adicione mais conforme necessário -->
-            </ul>
-        </section>
-        
-        <section id="projetos">
-            <h2>Projetos Realizados</h2>
+
+    <section class="materia-section">
+        <div class="container">
+            <h1>Técnicas Avançadas de Banco de Dados</h1>
             
-            <div class="projeto">
-                <h3>Nome do Projeto 1</h3>
-                <p><strong>Tecnologias:</strong> Lista de tecnologias usadas</p>
-                <p>Descrição detalhada do projeto, objetivos e seu papel no desenvolvimento.</p>
-                <a href="#">Link para o projeto (se disponível)</a>
+            <div class="materia-header">
+                <h2>Semestre: 2 | Carga Horária: 01:40 horas semanais</h2>
+                <p>Estudo de bancos de dados relacionais e não-relacionais, otimização de queries e modelagem avançada.</p>
             </div>
             
-            <!-- Adicione mais projetos conforme necessário -->
-        </section>
-        
-        <section id="aprendizados">
-            <h2>Principais Aprendizados</h2>
-            <p>[Reflexão sobre o que você aprendeu, desafios enfrentados e como esta matéria contribuiu para sua formação]</p>
-        </section>
-        
-        <div class="voltar">
-            <a href="../index.html">&larr; Voltar para o portfólio</a>
+            <div class="materia-content">
+                <div class="content-block">
+                    <h2>Conteúdo Estudado</h2>
+                    <ul>
+                        <li>Tipo de Junção e Subconsulta</li>
+                        <li>Criação de Views</li>
+                        <li>Criação de Function</li>
+                        <li>DCL(Data Control Language)</li>
+                    </ul>
+                </div>
+                
+                <div class="content-block">
+                    <h2>Projetos Realizados</h2>
+                </div>
+                
+                <div class="content-block">
+                    <h2>Aprendizados</h2>
+                    <p>Durante a matéria de Banco de Dados, aprendi desde os conceitos fundamentais até recursos mais avançados que ampliaram minha capacidade de manipular e organizar dados de forma eficiente. No início, estudei a estrutura básica de bancos relacionais, entendendo a importância das tabelas, chaves primárias, estrangeiras, tipos de dados e as operações básicas com comandos DDL e DML. Com isso, consegui criar e modificar tabelas, inserir, atualizar e excluir registros, além de fazer consultas simples com SELECT. Em seguida, aprendi a usar subconsultas, que são essenciais quando precisamos fazer consultas dentro de outras consultas, permitindo cruzar informações de múltiplas tabelas de forma mais sofisticada e dinâmica, algo crucial em cenários reais onde os dados estão fragmentados.</p>
+                    
+                    <p>Além disso, aprendi a criar views, que são representações virtuais de consultas salvas. Elas são úteis para simplificar consultas complexas, proteger dados sensíveis e manter a consistência lógica de acessos. Também explorei o uso de funções (functions), que permitem encapsular lógicas reutilizáveis no banco, como cálculos ou transformações de dados, o que aumenta a produtividade e padroniza as respostas das consultas. Outro tema importante foi a DCL (Data Control Language), com foco nos comandos GRANT e REVOKE, que são usados para controlar quem pode acessar ou modificar dados no banco, reforçando a importância da segurança e do controle de permissões em ambientes reais. Essa parte me mostrou como o controle de acesso é essencial para manter a integridade e confidencialidade dos dados. Ao final, percebi como todos esses elementos — das consultas básicas até funções e segurança — se conectam para formar sistemas de informação robustos, escaláveis e seguros.</p>
+                    
+                    <h3>Habilidades Desenvolvidas</h3>
+                    <ul>
+                        <li>Compreensão da estrutura de bancos relacionais</li>
+                        <li>Manipulação de dados com SQL (DML e DDL)</li>
+                        <li>Criação e uso de subconsultas (subqueries)</li>
+                        <li>Criação e gerenciamento de views (visões)</li>
+                        <li>Desenvolvimento de funções (functions) no banco de dados</li>
+                        <li>Aplicação de comandos DCL (Data Control Language)</li>
+                        <li>Interpretação e otimização de consultas SQL</li>
+                        <li>Noções de segurança e controle de acesso aos dados</li>
+                        <li>Raciocínio lógico aplicado à modelagem de dados</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="../index.html#materias" class="btn">Voltar para as Matérias</a>
+            </div>
         </div>
-    </div>
-    
+    </section>
+
     <footer>
-        <p>&copy; 2023 Meu Portfólio Acadêmico. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Pedro Henrique Afonso da Silva. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
