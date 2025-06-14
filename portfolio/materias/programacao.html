@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título da Matéria - Pedro Henrique</title>
+    <title>Técnicas Avançadas de Programação - Pedro Henrique</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
         .materia-section {
@@ -99,6 +99,27 @@
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(127, 219, 255, 0.4);
         }
+
+        .code-example {
+            background-color: #1e3a5f;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+
+        .topics-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 1rem 0;
+        }
+
+        .topic-column {
+            flex: 1;
+            min-width: 250px;
+        }
         
         @media (max-width: 768px) {
             .materia-content {
@@ -120,55 +141,111 @@
 
     <section class="materia-section">
         <div class="container">
-            <h1>Título da Matéria</h1>
+            <h1>Técnicas Avançadas de Programação</h1>
             
             <div class="materia-header">
-                <h2>Semestre: X | Carga Horária: XX horas</h2>
-                <p>Descrição breve da matéria e seus objetivos principais.</p>
+                <h2>Semestre: 1 | Carga Horária: 1:40 horas semanais</h2>
+                <p>Estudo de conceitos avançados de programação orientada a objetos, padrões de projeto e desenvolvimento de aplicações com persistência de dados.</p>
             </div>
             
             <div class="materia-content">
                 <div class="content-block">
                     <h2>Conteúdo Estudado</h2>
-                    <ul>
-                        <li>Tópico 1</li>
-                        <li>Tópico 2</li>
-                        <li>Tópico 3</li>
-                        <li>Tópico 4</li>
-                        <li>Tópico 5</li>
-                    </ul>
+                    <div class="topics-container">
+                        <div class="topic-column">
+                            <h3>Programação Orientada a Objetos</h3>
+                            <ul>
+                                <li>Classes e Objetos</li>
+                                <li>Encapsulamento</li>
+                                <li>Herança</li>
+                                <li>Polimorfismo</li>
+                                <li>Classes Abstratas</li>
+                                <li>Métodos e Sobrecarga</li>
+                            </ul>
+                        </div>
+                        <div class="topic-column">
+                            <h3>Padrões de Projeto</h3>
+                            <ul>
+                                <li>Padrões Fundamentais GoF</li>
+                                <li>MVC, MVVM, MVP</li>
+                                <li>Arquitetura em Camadas</li>
+                                <li>Desenvolvimento Dirigido a Testes (TDD)</li>
+                            </ul>
+                        </div>
+                        <div class="topic-column">
+                            <h3>Tópicos Avançados</h3>
+                            <ul>
+                                <li>Manipulação de Exceções</li>
+                                <li>Persistência de dados</li>
+                                <li>Controle de versionamento</li>
+                                <li>Interface Gráfica</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="content-block">
                     <h2>Projetos Realizados</h2>
                     
                     <div class="projeto">
-                        <h3>Nome do Projeto 1</h3>
-                        <p><strong>Tecnologias:</strong> Tecnologia 1, Tecnologia 2</p>
-                        <p>Descrição detalhada do projeto, objetivos e seu papel no desenvolvimento.</p>
-                        <a href="#" class="btn">Ver Projeto</a>
-                    </div>
-                    
-                    <div class="projeto">
-                        <h3>Nome do Projeto 2</h3>
-                        <p><strong>Tecnologias:</strong> Tecnologia 1, Tecnologia 2</p>
-                        <p>Descrição detalhada do projeto, objetivos e seu papel no desenvolvimento.</p>
-                        <a href="#" class="btn">Ver Projeto</a>
+                        <h3>CRUD 1-N com .NET e PostgreSQL</h3>
+                        <p><strong>Tecnologias:</strong> ASP.NET Core MVC, PostgreSQL, Entity Framework Core</p>
+                        <p>Projeto prático de desenvolvimento de um sistema de cadastro com relacionamento 1 para N entre fornecedores e produtos.</p>
+                        
+                        <h4>Passos Principais:</h4>
+                        <ol>
+                            <li>Criação do projeto MVC no Visual Studio</li>
+                            <li>Configuração do PostgreSQL e Entity Framework</li>
+                            <li>Definição das classes Model (Fornecedor e Produto)</li>
+                            <li>Criação do DbContext e configuração da conexão</li>
+                            <li>Geração de migrations e criação do banco</li>
+                            <li>Scaffolding de controllers e views</li>
+                            <li>Personalização da interface</li>
+                        </ol>
+                        
+                        <h4>Exemplo de Configuração:</h4>
+                        <div class="code-example">
+                            <pre>// Configuração do DbContext no Program.cs
+builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));</pre>
+                        </div>
+                        
+                        <h4>Modelo de Fornecedor:</h4>
+                        <div class="code-example">
+                            <pre>public class Fornecedor
+{
+    public int FornecedorId { get; set; }
+    public string Nome { get; set; } = string.Empty;
+    public string Cidade { get; set; } = string.Empty;
+    public ICollection&lt;Produto&gt;? Produtos { get; set; }
+}</pre>
+                        </div>
+                        
+                        <a href="#" class="btn">Ver Detalhes do Projeto</a>
                     </div>
                 </div>
                 
                 <div class="content-block">
                     <h2>Aprendizados</h2>
-                    <p>Esta matéria me proporcionou um entendimento profundo sobre [assunto principal]. Aprendi a importância de [conceito importante] e como aplicar [técnica/metodologia] em projetos reais.</p>
+                    <p>Esta disciplina me proporcionou um entendimento profundo sobre programação orientada a objetos e sua aplicação em projetos reais. Aprendi a importância de conceitos como encapsulamento, herança e polimorfismo para criar sistemas mais organizados e manuteníveis.</p>
                     
-                    <p>Os projetos práticos foram essenciais para consolidar o conhecimento teórico, especialmente na parte de [destaque do aprendizado].</p>
+                    <p>O projeto prático de CRUD com .NET e PostgreSQL foi essencial para consolidar o conhecimento sobre arquitetura MVC, Entity Framework e relacionamentos entre entidades. A implementação do relacionamento 1-N entre fornecedores e produtos me mostrou na prática como modelar corretamente as classes e configurar o DbContext para refletir esses relacionamentos no banco de dados.</p>
+                    
+                    <p>Além disso, aprendi sobre padrões de projeto e como eles podem ser aplicados para resolver problemas comuns de desenvolvimento de software de forma elegante e eficiente. A arquitetura em camadas e o padrão MVC se mostraram particularmente úteis para organizar o código e separar adequadamente as responsabilidades.</p>
                     
                     <h3>Habilidades Desenvolvidas</h3>
                     <ul>
-                        <li>Habilidade 1</li>
-                        <li>Habilidade 2</li>
-                        <li>Habilidade 3</li>
-                        <li>Habilidade 4</li>
+                        <li>Domínio dos princípios de POO (Encapsulamento, Herança, Polimorfismo)</li>
+                        <li>Implementação de classes abstratas e interfaces</li>
+                        <li>Desenvolvimento com ASP.NET Core MVC</li>
+                        <li>Configuração e uso do Entity Framework Core</li>
+                        <li>Trabalho com PostgreSQL em aplicações .NET</li>
+                        <li>Implementação de relacionamentos 1-N entre entidades</li>
+                        <li>Criação e aplicação de migrations</li>
+                        <li>Desenvolvimento seguindo o padrão MVC</li>
+                        <li>Implementação de CRUDs completos</li>
+                        <li>Personalização de views e controllers</li>
+                        <li>Tratamento de exceções e validações</li>
                     </ul>
                 </div>
             </div>

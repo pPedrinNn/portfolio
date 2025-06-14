@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título da Matéria - Pedro Henrique</title>
+    <title>Matemática Discreta - Pedro Henrique</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
         .materia-section {
@@ -65,7 +65,7 @@
             margin-top: 0;
         }
         
-        ul {
+        ul, ol {
             line-height: 1.8;
             padding-left: 20px;
         }
@@ -105,6 +105,27 @@
                 flex-direction: column;
             }
         }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #7fdbff;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #164e63;
+        }
+        
+        .math {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -120,22 +141,24 @@
 
     <section class="materia-section">
         <div class="container">
-            <h1>Título da Matéria</h1>
+            <h1>Matemática Discreta</h1>
             
             <div class="materia-header">
-                <h2>Semestre: X | Carga Horária: XX horas</h2>
-                <p>Descrição breve da matéria e seus objetivos principais.</p>
+                <h2>Semestre: 1 | Carga Horária: 1:40 horas semanais</h2>
+                <p>Fundamentos matemáticos para ciência da computação, incluindo lógica, teoria dos conjuntos, combinatória e teoria dos grafos.</p>
             </div>
             
             <div class="materia-content">
                 <div class="content-block">
                     <h2>Conteúdo Estudado</h2>
                     <ul>
-                        <li>Tópico 1</li>
-                        <li>Tópico 2</li>
-                        <li>Tópico 3</li>
-                        <li>Tópico 4</li>
-                        <li>Tópico 5</li>
+                        <li>Introdução à Matemática Discreta</li>
+                        <li>Lógica Proposicional e Tabelas Verdade</li>
+                        <li>Teoria dos Conjuntos</li>
+                        <li>Operações com Conjuntos</li>
+                        <li>Análise Combinatória</li>
+                        <li>Teoria dos Grafos</li>
+                        <li>Árvores e Algoritmos de Busca</li>
                     </ul>
                 </div>
                 
@@ -143,34 +166,103 @@
                     <h2>Projetos Realizados</h2>
                     
                     <div class="projeto">
-                        <h3>Nome do Projeto 1</h3>
-                        <p><strong>Tecnologias:</strong> Tecnologia 1, Tecnologia 2</p>
-                        <p>Descrição detalhada do projeto, objetivos e seu papel no desenvolvimento.</p>
+                        <h3>Implementação de Tabelas Verdade</h3>
+                        <p><strong>Tecnologias:</strong> Python, Lógica Proposicional</p>
+                        <p>Desenvolvimento de um programa que gera tabelas verdade para expressões lógicas complexas.</p>
                         <a href="#" class="btn">Ver Projeto</a>
                     </div>
                     
                     <div class="projeto">
-                        <h3>Nome do Projeto 2</h3>
-                        <p><strong>Tecnologias:</strong> Tecnologia 1, Tecnologia 2</p>
-                        <p>Descrição detalhada do projeto, objetivos e seu papel no desenvolvimento.</p>
+                        <h3>Algoritmos de Busca em Grafos</h3>
+                        <p><strong>Tecnologias:</strong> Python, Teoria dos Grafos</p>
+                        <p>Implementação de algoritmos de busca em largura e profundidade em estruturas de grafos.</p>
                         <a href="#" class="btn">Ver Projeto</a>
                     </div>
                 </div>
                 
                 <div class="content-block">
                     <h2>Aprendizados</h2>
-                    <p>Esta matéria me proporcionou um entendimento profundo sobre [assunto principal]. Aprendi a importância de [conceito importante] e como aplicar [técnica/metodologia] em projetos reais.</p>
+                    <p>A Matemática Discreta me proporcionou ferramentas essenciais para o pensamento lógico e algorítmico. Aprendi a formalizar problemas computacionais usando estruturas discretas e a aplicar princípios matemáticos na análise de algoritmos.</p>
                     
-                    <p>Os projetos práticos foram essenciais para consolidar o conhecimento teórico, especialmente na parte de [destaque do aprendizado].</p>
+                    <p>Os conceitos de lógica proposicional foram fundamentais para entender estruturas condicionais em programação, enquanto a teoria dos grafos me mostrou como modelar relações complexas entre objetos.</p>
                     
                     <h3>Habilidades Desenvolvidas</h3>
                     <ul>
-                        <li>Habilidade 1</li>
-                        <li>Habilidade 2</li>
-                        <li>Habilidade 3</li>
-                        <li>Habilidade 4</li>
+                        <li>Construção e análise de tabelas verdade</li>
+                        <li>Manipulação de conjuntos e operações entre eles</li>
+                        <li>Cálculo combinatório para problemas de contagem</li>
+                        <li>Modelagem de problemas usando grafos</li>
+                        <li>Implementação de algoritmos em árvores de decisão</li>
+                        <li>Análise de complexidade de algoritmos</li>
                     </ul>
                 </div>
+            </div>
+            
+            <div class="content-block">
+                <h2>Detalhes do Conteúdo</h2>
+                
+                <h3>1. Lógica Proposicional</h3>
+                <p>Estudo de proposições, conectivos lógicos e tabelas verdade:</p>
+                
+                <h4>Tabela Verdade - Conjunção (E lógico)</h4>
+                <table>
+                    <tr>
+                        <th>p</th>
+                        <th>q</th>
+                        <th>p ∧ q</th>
+                    </tr>
+                    <tr>
+                        <td>V</td>
+                        <td>V</td>
+                        <td>V</td>
+                    </tr>
+                    <tr>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>V</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>F</td>
+                    </tr>
+                </table>
+                
+                <h4>Condicionais e Equivalências</h4>
+                <p>Implicação (p → q) e equivalência (p ↔ q) com suas respectivas tabelas verdade.</p>
+                
+                <h3>2. Teoria dos Conjuntos</h3>
+                <p>Operações básicas:</p>
+                <ul>
+                    <li><strong>União:</strong> A ∪ B = {x | x ∈ A ou x ∈ B}</li>
+                    <li><strong>Interseção:</strong> A ∩ B = {x | x ∈ A e x ∈ B}</li>
+                    <li><strong>Diferença:</strong> A - B = {x | x ∈ A e x ∉ B}</li>
+                    <li><strong>Complementar:</strong> C<sub>B</sub><sup>A</sup> = B - A (quando A ⊂ B)</li>
+                </ul>
+                
+                <h3>3. Análise Combinatória</h3>
+                <p>Princípios de contagem:</p>
+                <ul>
+                    <li><strong>Arranjos:</strong> A<sub>m,r</sub> = m!/(m-r)!</li>
+                    <li><strong>Combinações:</strong> C<sub>m,r</sub> = m!/(r!(m-r)!)</li>
+                    <li><strong>Permutações:</strong> P<sub>m</sub> = m!</li>
+                    <li><strong>Permutações com repetição:</strong> P<sub>m</sub><sup>n1,n2,...</sup> = m!/(n1!n2!...)</li>
+                </ul>
+                
+                <h3>4. Teoria dos Grafos</h3>
+                <p>Conceitos fundamentais:</p>
+                <ul>
+                    <li>Vértices, arestas e graus</li>
+                    <li>Grafos direcionados e não-direcionados</li>
+                    <li>Caminhos e ciclos</li>
+                    <li>Árvores e algoritmos de busca</li>
+                    <li>Matriz de adjacência</li>
+                </ul>
             </div>
             
             <div style="text-align: center; margin-top: 3rem;">
